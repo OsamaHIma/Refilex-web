@@ -13,16 +13,12 @@ const CanvasLoader = () => {
         flexDirection: "column",
       }}
     >
-       <div className="h-10 w-10 animate-spin rounded-full border-b-2 border-t-2 border-gray-900 dark:border-gray-300"></div>
+       <div className="h-12 w-12 animate-spin rounded-full border-b-2 border-t-2 border-gray-900 dark:border-gray-300"></div>
       <p
-        style={{
-          fontSize: 14,
-          color: "#F1F1F1",
-          fontWeight: 800,
-          marginTop: 40,
-        }}
+      className="text-xl text-gray-500 font-bold mt-8"
+
       >
-       Loading {progress.toFixed(2)}%
+       Loading <span className="text-green-500">{progress.toFixed(2)}</span>%
       </p>
     </Html>
   );

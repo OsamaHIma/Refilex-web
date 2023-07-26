@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import OurValue from "@/components/OurValue";
 import Residencies from "@/components/Residencies";
+import ComputersCanvas from "@/components/VideoCanvas";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
           </svg>
         </div>
       </section>
+      <ComputersCanvas/>
       <Companies />
       <Residencies />
       <div className="relative">

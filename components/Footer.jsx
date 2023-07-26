@@ -5,7 +5,7 @@ const Footer = () => {
     <section>
       <div className="paddings innerWidth flexCenter  md:!justify-between f-container">
         <div className="flexColStart f-left gap-4 text-center !items-center md:!items-start md:!text-left">
-          <Image src="/logo2.png" alt="logo" width={120} height={120} />
+          <Image src="/logo.png" alt="logo" width={120} height={120} />
           <h3 className="secondaryText">
             Our vision is to make all people <br />
             the best place to live for them.
