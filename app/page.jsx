@@ -39,7 +39,7 @@ const Home = () => {
           </svg>
         </div>
       </section>
-      <ComputersCanvas/>
+      {/* <ComputersCanvas/> */}
       <Companies />
       <Residencies />
       <div className="relative">

@@ -18,7 +18,7 @@ const CanvasLoader = () => {
       className="text-xl text-gray-500 font-bold mt-8"
 
       >
-       Loading <span className="text-green-500">{progress.toFixed(2)}</span>%
+       Loading <span className="text-orange-400">{progress.toFixed(2)}</span>%
       </p>
     </Html>
   );

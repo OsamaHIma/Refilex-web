@@ -30,10 +30,8 @@ module.exports = {
         'light-blue': '#eeeeff',
         'dark-blue': '#4066ff',
         'light-gray': 'rgb(140 139 139)',
-      },
-      backgroundColor: {
-        ...backgroundColor,
       "primary-black":"#131110",
+        'dark-orange':"#eb9544"
       }
     },
   },

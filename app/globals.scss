@@ -73,7 +73,7 @@ $shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
 }
 
 .custom-shape-divider-bottom-1690286822 .shape-fill {
-  fill: #FFFFFF;
+  @apply fill-slate-50 dark:fill-[#201d1b]
 }
 
 .accordion-shadow {

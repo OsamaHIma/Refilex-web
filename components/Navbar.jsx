@@ -37,13 +37,13 @@ const Navbar = () => {
   };
   return (
     <section className="h-wrapper text-slate-800 transition-all ease-in dark:text-white">
-      <div className="h-container flexCenter paddings innerWidth relative !justify-between border-b-[3px] border-slate-300 py-4 dark:border-slate-700">
+      <div className="h-container flexCenter paddings innerWidth relative !justify-between border-b-[3px] border-slate-300 !py-2 dark:border-slate-700">
         <div className="flex items-center gap-3">
           <Link href="/">
             <img src="/logo.png" alt="logo" />
           </Link>
 
-          <div className="hidden h-20 w-[1px] bg-gray-400 md:block"></div>
+          <div className="hidden h-20 w-[1px] bg-blue-500 md:block"></div>
           <div className="hidden md:block">
             <p>
               <Translate>Contact US</Translate>
@@ -68,24 +68,24 @@ const Navbar = () => {
 
           <ul
             dir="ltr"
-            className={`${showThemeMenu} menuTransition bg-blue-gradient absolute z-10 m-8 flex w-[9rem] select-none flex-col gap-3 rounded-md shadow-lg ltr:right-[-30%] rtl:right-0 md:ltr:right-[60%]`}
+            className={`${showThemeMenu} menuTransition bg-blue-gradient absolute z-50 m-8 flex w-[9rem] select-none flex-col gap-3 rounded-md shadow-lg ltr:right-[-30%] rtl:right-0 md:ltr:right-[60%]`}
           >
             <li
-              className="cursor-pointer rounded-t-md px-8 pb-2 pt-4 text-slate-100 hover:bg-slate-800 hover:text-gray-300 active:!bg-gray-400"
+              className="cursor-pointer rounded-t-md px-8 pb-2 pt-4 text-slate-100 hover:bg-blue-500 hover:text-gray-300 active:!bg-blue-500"
               onClick={() => setTheme("dark")}
             >
               <Moon className="mr-2 h-4 w-4" />
               <span>Dark</span>
             </li>
             <li
-              className="cursor-pointer py-2 pl-8 text-slate-100 hover:bg-slate-800 hover:text-gray-300 active:!bg-gray-400"
+              className="cursor-pointer py-2 pl-8 text-slate-100 hover:bg-blue-500 hover:text-gray-300 active:!bg-blue-500"
               onClick={() => setTheme("light")}
             >
               <Sun className="mr-2 h-4 w-4" />
               <span>Light</span>
             </li>
             <li
-              className="cursor-pointer rounded-b-md pb-4 pl-8 pt-2 text-slate-100 hover:bg-slate-800 hover:text-gray-300 active:!bg-gray-400"
+              className="cursor-pointer rounded-b-md pb-4 pl-8 pt-2 text-slate-100 hover:bg-blue-500 hover:text-gray-300 active:!bg-blue-500"
               onClick={() => setTheme("system")}
             >
               <Laptop className="mr-2 h-4 w-4" />
@@ -114,8 +114,8 @@ const Navbar = () => {
             </ul>
           </div>
           {/* for medium and small screens */}
-          <div className="block md:hidden">
-            <LanguageSelector />
+          <div className="block md:hidden ">
+            <LanguageSelector dropdownBgColor="!bg-red-600" className="!z-50" dropdownItemBgColor="!bg-red-600" dropDownIconClass="dark:!text-slate-100" />
           </div>
           <button className="mx-4 block lg:hidden" onClick={openMenu}>
             <MenuIcon className="hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100" />

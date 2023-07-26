@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="paddings innerWidth grid grid-cols-1 !items-end gap-11 md:grid-cols-2">
         <div className="hero-left flexColStart gap-12">
           <div className="hero-title relative z-[1]">
-            <div className="circle bg-orange-gradient absolute -top-[5%] right-[30%] -z-[1] h-16 w-16 animate-spin" />
+            <div className="circle bg-orange-gradient absolute duration-75 -top-[5%] right-[30%] -z-[1] h-16 w-16 animate-spin" />
             <motion.h1
               initial={{ y: "2rem", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -75,7 +75,7 @@ const Hero = () => {
                 <span className="text-4xl font-semibold text-slate-700 dark:text-gray-100">
                   M
                 </span>
-                <span className="ml-2 text-3xl font-bold text-[#eb9544]">
+                <span className="ml-2 text-3xl font-bold text-dark-orange">
                   +
                 </span>
               </span>
@@ -89,7 +89,7 @@ const Hero = () => {
                   duration={4}
                   className="text-4xl font-semibold text-slate-700 dark:text-gray-100"
                 />
-                <span className="ml-2 text-3xl font-bold text-[#eb9544]">
+                <span className="ml-2 text-3xl font-bold text-dark-orange">
                   +
                 </span>
               </span>
@@ -98,7 +98,7 @@ const Hero = () => {
           </div>
         </div>
         <motion.div
-          className="hero-right"
+          className="hero-right z-[5]"
           initial={{ x: "3rem", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, type: "tween" }}

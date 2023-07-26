@@ -8,7 +8,9 @@ function Error({ errorMessage }) {
   };
 
   return (
-    <section className="bg-white dark:bg-gray-900 ">
+    <section className="relative">
+        <div className="gradient absolute top-10 right-[100px] h-80 w-80 bg-indigo-600/30 blur-[100px]" />
+
       <div className="container mx-auto min-h-screen px-6 py-12 lg:flex lg:items-center lg:gap-12">
         <div className="wf-ull lg:w-1/2">
           <p className="text-sm font-medium text-red-500 dark:text-red-400">
@@ -24,7 +26,7 @@ function Error({ errorMessage }) {
           <div className="mt-6 flex items-center gap-x-3">
             <button
               onClick={handleGoBack}
-              className="flex w-1/2 items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 sm:w-auto"
+              className="flex w-1/2 items-center justify-center gap-x-2 rounded-lg border bg-transaprent px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-800 sm:w-auto"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
