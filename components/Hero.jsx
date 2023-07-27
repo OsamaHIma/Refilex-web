@@ -1,22 +1,29 @@
 "use client";
-import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CountUp from "react-countup";
-import ImageCol from "./ImageCol";
 import { motion } from "framer-motion";
 import { Translate } from "translate-easy";
-import { Suspense } from "react";
-import CanvasLoader from "./CanvasLoader";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import PhoneCanvas from "./PhoneCanvas";
+import { Folder, User, Users, Code, X } from "lucide-react";
 
 const Hero = () => {
   return (
-    <header className="hero-wrapper relative z-10 pb-8 text-slate-900 transition-all ease-in dark:text-white">
+    <header className="hero-wrapper pt-40 relative z-10 pb-8 text-slate-800 transition-all ease-in dark:text-slate-100">
+      <div className="static-shape background-shape-main -z-1 absolute" />
+
       <div className="paddings innerWidth grid grid-cols-1 !items-end gap-11 md:grid-cols-2">
         <div className="hero-left flexColStart gap-12">
           <div className="hero-title relative z-[1]">
-            <div className="circle bg-orange-gradient absolute duration-75 -top-[5%] right-[30%] -z-[1] h-16 w-16 animate-spin" />
+            <div
+              className="circle absolute -top-[6%] left-0 -z-[1] h-[6.3rem] w-[6.3rem] rounded-full border-4 border-dashed border-orange-400 bg-transparent"
+              style={{ animation: "spin 2.7s linear infinite" }}
+            />
+
+            {/* <X
+              size={30}
+              className="-top-[2%] left-0 -z-[1] text-gray-400"
+              style={{ animation: "spin 2.7s linear infinite" }}
+            /> */}
+
             <motion.h1
               initial={{ y: "2rem", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -39,6 +46,7 @@ const Hero = () => {
           </div>
           <div className="status flexCenter w-ful justify-between gap-8">
             <div className="flexColCenter stat">
+              <User className="text-indigo-500" />
               <span>
                 <CountUp
                   start={0}
@@ -50,7 +58,9 @@ const Hero = () => {
               </span>
               <span className="text-light-gray">Client</span>
             </div>
+
             <div className="flexColCenter stat">
+              <Users className="text-indigo-500" />
               <span>
                 <CountUp
                   start={0}
@@ -64,7 +74,9 @@ const Hero = () => {
               </span>
               <span className="text-light-gray">Team Members</span>
             </div>
+
             <div className="flexColCenter stat">
+              <Code className="text-indigo-500" />
               <span>
                 <CountUp
                   start={0}
@@ -81,7 +93,9 @@ const Hero = () => {
               </span>
               <span className="text-light-gray">Line Of Code</span>
             </div>
+
             <div className="flexColCenter stat">
+              <Folder className="text-indigo-500" />
               <span>
                 <CountUp
                   start={0}

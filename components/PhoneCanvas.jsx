@@ -1,11 +1,12 @@
+"use client";
 import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useEffect, useState } from "react";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import * as THREE from "three";
 import CanvasLoader from "./CanvasLoader";
 
 const Phone = ({ isMobile }) => {
-  const phone = useGLTF("/models/phone/scene.gltf");
+  const phone = useGLTF("/models/samsung/scene.gltf");
+
   return (
     <mesh>
       <ambientLight />
@@ -32,10 +33,10 @@ const Phone = ({ isMobile }) => {
       />
 
       <primitive
-        rotation={[0, 4.3, 0]}
+        rotation={[0, 0, 0]}
         object={phone.scene}
-        scale={0.07}
-        position={[0, -1.25, -1.5]}
+        scale={5}
+        position={[0, -10, -1.5]}
       />
     </mesh>
   );
@@ -58,7 +59,7 @@ const PhoneCanvas = () => {
 
   return (
     <Canvas
-      frameloop="demand"
+      // frameloop="demand"
       dpr={[1, 2]}
       camera={{ position: [0, 0, 80], fov: 25, rotation: [0, 0, 0] }}
       gl={{ preserveDrawingBuffer: true }}

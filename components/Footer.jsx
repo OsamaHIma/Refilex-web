@@ -13,7 +13,7 @@ Empower your business with our services.
         </div>
         <div className="flexColStart !items-center text-center f-right">
           <span className="primaryText dark:text-indigo-500">Information</span>
-          <span className="secondaryText">145 New York, FL 5467, USA</span>
+          <span className="secondaryText">21 Fawakeh Dokki, Cairo, Egypt</span>
           <div className="flexCenter f-menu gap-6 font-medium mt-6">
             <span>Property</span>
             <span>Services</span>

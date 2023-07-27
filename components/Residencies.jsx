@@ -43,7 +43,7 @@ const Residencies = () => {
             </h3>
           </motion.div>
         </div>
-        <Swiper {...sliderSittings}   autoplay={{ delay: 3000 }}>
+        <Swiper {...sliderSittings} autoplay={{ delay: 3000 }}>
           <SwiperButtons />
           {sliderData.map((card, index) => (
             <SwiperSlide key={index}>

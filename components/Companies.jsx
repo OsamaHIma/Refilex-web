@@ -1,10 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
-
-import { useRef } from "react";
 import Image from "next/image";
-import { LucideChevronLeft, LucideChevronRight } from "lucide-react";
+import { companiesSliderSittings } from "@/constants";
 
 const Companies = () => {
   const images = [
@@ -18,61 +16,32 @@ const Companies = () => {
     "/asperologo-768x839.png",
     "/Artboard-41.png",
   ];
-  
-SwiperCore.use([Autoplay]);
 
+  SwiperCore.use([Autoplay]);
 
-  const swiperRef = useRef(null); // initialize ref
-
-  const SwiperButtons = () => {
-    const swiper = useSwiper();
-
-    return (
-      <div className="swiper-buttons absolute -top-2 right-10 flex flex-wrap gap-3">
-        <button
-          className="rounded-md bg-slate-200 px-2 py-1 text-dark-blue shadow transition-all ease-in hover:scale-110 dark:bg-gray-400"
-          onClick={() => swiper.slidePrev()}
-        >
-          <LucideChevronLeft width={19} />
-        </button>
-        <button
-          className="rounded-md px-2 py-1 text-dark-blue shadow transition-all ease-in hover:scale-110 dark:bg-[#eee]"
-          onClick={() => swiper.slideNext()}
-        >
-          <LucideChevronRight width={19} />
-        </button>
-      </div>
-    );
-  };
   return (
     <section>
-      <h1 className="primaryText mt-3  text-center">Our Happy Clients</h1>
-      <Swiper
-        loop
-        className="pt-8"
-        spaceBetween={20}
-        slidesPerView={6}
-        // modules={[Autoplay]}
-        autoplay={{ delay: 3000 }}
-        navigation={{
-          prevEl: ".swiper-button-prev",
-          nextEl: ".swiper-button-next",
-        }}
-        on={{
-          slideChangeTransitionEnd: () => {
-            swiperRef.current.autoplay.start(); // restart autoplay
-          },
-        }}
-        wrapperProps={{ direction: "ltr" }}
-        ref={swiperRef} // assign ref
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <Image src={image} alt="company" width={146} height={146} />
-          </SwiperSlide>
-        ))}
-        <SwiperButtons />
-      </Swiper>
+      <h1 className="mt-8 text-3xl text-gray-400 font-bold text-center">OUR HAPPY CLIENTS</h1>
+      <div className="relative">
+        <Swiper
+          className="pt-8"
+          {...companiesSliderSittings}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <Image
+                src={image}
+                alt="company"
+                className="scale-75 opacity-50 grayscale transition-all duration-500 ease-in-out hover:scale-100 hover:cursor-pointer hover:opacity-100 hover:grayscale-0"
+                width={137}
+                height={137}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* <SwiperButtons /> */}
+      </div>
     </section>
   );
 };

@@ -14,8 +14,7 @@ import { accordionData } from "@/constants";
 import { motion } from "framer-motion";
 
 const OurValue = () => {
-  const [ClassName, setClassName] = useState(null);
-  console.log(ClassName);
+
   return (
     <section id="our-value">
       <div className="paddings flexCenter gap-4 innerWidth">
@@ -54,7 +53,7 @@ const OurValue = () => {
               <AccordionItem
                 key={index}
                 uuid={index}
-                className={`bg-slate-50 ${ClassName} dark:!bg-black/10 rounded-md overflow-hidden mb-6`}
+                className={`bg-slate-50 dark:!bg-black/10 rounded-md overflow-hidden mb-6`}
               >
                 <AccordionItemHeading>
                   <AccordionItemButton

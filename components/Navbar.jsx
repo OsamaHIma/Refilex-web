@@ -4,13 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Moon, Sun, Laptop, MenuIcon, Mail, Phone } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LanguageSelector, Translate } from "translate-easy";
 // h- stands for header-
 const Navbar = () => {
   const { setTheme } = useTheme();
   const [showThemeMenu, setThemeMenu] = useState("-top-[400px]");
   const [showMenu, setMenu] = useState("-right-[400px]");
+  const [scrolled, setScrolled] = useState(false);
   // theme Menu toggler button
   const openThemeMenu = () => {
     if (showMenu === "right-0") {
@@ -35,8 +36,28 @@ const Navbar = () => {
       setMenu("right-0");
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 170) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <section className="h-wrapper text-slate-800 transition-all ease-in dark:text-white">
+    <nav
+      className={` ${
+        scrolled &&
+        " backdrop-blur-md bg-indigo-600/50"
+      } h-wrapper fixed top-0 z-20 w-full text-slate-100 transition-all ease-in`}
+    >
       <div className="h-container flexCenter paddings innerWidth relative !justify-between border-b-[3px] border-slate-300 !py-2 dark:border-slate-700">
         <div className="flex items-center gap-3">
           <Link href="/">
@@ -58,7 +79,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-        <nav className="flexCenter relative">
+        <section className="flexCenter relative">
           {/* Theme menu */}
           <button className="mx-4" onClick={openThemeMenu}>
             <Moon className="hidden rotate-90 transition-all hover:text-slate-900 dark:block dark:rotate-0 dark:text-slate-400 dark:saturate-100 dark:hover:text-slate-100" />
@@ -115,7 +136,12 @@ const Navbar = () => {
           </div>
           {/* for medium and small screens */}
           <div className="block md:hidden ">
-            <LanguageSelector dropdownBgColor="!bg-red-600" className="!z-50" dropdownItemBgColor="!bg-red-600" dropDownIconClass="dark:!text-slate-100" />
+            <LanguageSelector
+              dropdownBgColor="!bg-red-600"
+              className="!z-50"
+              dropdownItemBgColor="!bg-red-600"
+              dropDownIconclassName="dark:!text-slate-100"
+            />
           </div>
           <button className="mx-4 block lg:hidden" onClick={openMenu}>
             <MenuIcon className="hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100" />
@@ -135,9 +161,9 @@ const Navbar = () => {
               </Link>
             </button>
           </ul>
-        </nav>
+        </section>
       </div>
-    </section>
+    </nav>
   );
 };
 
