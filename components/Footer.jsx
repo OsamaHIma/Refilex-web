@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="flexColStart f-right !items-center text-center">
           <span className="primaryText dark:text-indigo-500">Information</span>
-          <span className="secondaryText">21 Fawakeh Dokki, Cairo, Egypt</span>
+          <a href="https://www.google.com/maps?ll=30.05016,31.202757&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=3975772482927079619" target="_blank" className="secondaryText">21 Fawakeh Dokki, Cairo, Egypt</a>
          <SocialIcons/>
         </div>
       </div>

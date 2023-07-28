@@ -71,11 +71,11 @@ const Navbar = () => {
           <div className="hidden h-20 w-[1px] bg-gray-500 md:block"></div>
           <div className="hidden md:block">
             <p>Contact US</p>
-            <a href="mailto:" className="mr-2">
+            <a href="mailto:info@refilex.com" className="mr-2">
               <Mail className="mr-1 inline" />
               info@refilex.com
             </a>
-            <a href="tel:+">
+            <a href="tel:+201050533006">
               <Phone className="mr-1 inline" />
               +201050533006
             </a>

@@ -102,9 +102,9 @@ const ContactForm = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.5, type: "tween" }}
                     viewport={{ once: true }}
-                    className="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:px-12 lg:-mr-14"
+                    className="relative z-[1] block rounded-lg bg-[#e9e9e9] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[30px] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:px-12 lg:-mr-14"
                   >
-                    <h3 className="mx-auto text-3xl text-stone-50 ">
+                    <h3 className="mx-auto text-3xl text-stone-400 dark:text-stone-50 ">
                       Contact Us.
                     </h3>
                     <form
@@ -114,7 +114,7 @@ const ContactForm = () => {
                       noValidate
                     >
                       <label className="flex flex-col">
-                        <div className="mb-4 text-left font-medium text-white">
+                        <div className="mb-4 text-left font-medium text-stone-400 dark:text-stone-100">
                           <span>Name:</span>
                         </div>
                         <div className="relative">
@@ -125,14 +125,14 @@ const ContactForm = () => {
                             required
                             minLength={4}
                             onChange={handelChange}
-                            placeholder="Relax and try to remember"
-                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                            placeholder="Your first and last name"
+                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-stone-400 dark:text-stone-100 outline-none"
                           />
                           {/* <User className="text-theme-color absolute top-4 right-3" /> */}
                         </div>
                       </label>
                       <label className="flex flex-col">
-                        <div className="mb-4 text-left font-medium text-white">
+                        <div className="mb-4 text-left font-medium text-stone-400 dark:text-stone-100">
                           <span>Email:</span>
                         </div>
                         <div className="relative">
@@ -143,13 +143,13 @@ const ContactForm = () => {
                             autoComplete="on"
                             onChange={handelChange}
                             placeholder="Whats's your email?"
-                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-stone-400 dark:text-stone-100 outline-none"
                           />
                           {/* <MailIcon className="text-theme-color absolute top-4 right-3" /> */}
                         </div>
                       </label>
                       <label className="flex flex-col">
-                        <div className="mb-4 text-left font-medium text-white">
+                        <div className="mb-4 text-left font-medium text-stone-400 dark:text-stone-100">
                           <span>Phone:</span>
                         </div>
                         <div className="relative">
@@ -159,13 +159,13 @@ const ContactForm = () => {
                             autoComplete="on"
                             onChange={handelChange}
                             placeholder="Whats's your phone number?"
-                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-stone-400 dark:text-stone-100 outline-none"
                           />
                           {/* <MailIcon className="text-theme-color absolute top-4 right-3" /> */}
                         </div>
                       </label>
                       <label className="flex flex-col justify-start">
-                        <div className="mb-4 text-left font-medium text-white">
+                        <div className="mb-4 text-left font-medium text-stone-400 dark:text-stone-100">
                           <span>Message:</span>{" "}
                         </div>
                         <div className="relative">
@@ -176,7 +176,7 @@ const ContactForm = () => {
                             onChange={handelChange}
                             minLength={6}
                             placeholder="Finally What do you wanna say?"
-                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-stone-400 dark:text-stone-100 outline-none"
                           />
                           {/* <MessagesSquare className="text-theme-color absolute top-4 right-3" /> */}
                         </div>
@@ -186,7 +186,7 @@ const ContactForm = () => {
                         type="submit"
                         data-te-ripple-init
                         data-te-ripple-color="light"
-                        className="inline-block w-full rounded bg-indigo-800 px-6 pb-2 pt-2.5 font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-indigo-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-indigo-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-indigo-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] lg:mb-0"
+                        className="inline-block w-full rounded bg-indigo-800 px-6 pb-2 pt-2.5 font-medium uppercase leading-normal text-stone-400 dark:text-stone-100 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-indigo-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-indigo-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-indigo-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] lg:mb-0"
                       >
                         {loading ? "Sending..." : "Send"}
                       </button>
@@ -228,8 +228,8 @@ const ContactForm = () => {
                       <Phone />
                     </div>
                     <div>
-                      <h3 className="text left">Phone</h3>
-                      <a href="tel:+">+201050533006</a>
+                      <h3 className="text left text-stone-100">Phone</h3>
+                      <a href="tel:+201050533006" className="text-gray-300">+201050533006</a>
                     </div>
                   </Tilt>
                 </motion.div>
@@ -250,8 +250,8 @@ const ContactForm = () => {
                       <MailIcon />
                     </div>
                     <div>
-                      <h3 className="text left">Mail</h3>
-                      <a href="mailto:" className="mr-2">
+                      <h3 className="text left text-stone-100">Mail</h3>
+                      <a href="mailto:info@refilex.com" className="text-gray-300">
                         info@refilex.com
                       </a>
                     </div>
@@ -275,8 +275,8 @@ const ContactForm = () => {
                     </div>
 
                     <div>
-                      <h3 className="text left">Address</h3>
-                      <p>21 Fawakeh,Ad Doqi,Giza</p>
+                      <h3 className="text left text-stone-100">Address</h3>
+                      <a href="https://www.google.com/maps?ll=30.05016,31.202757&z=14&t=m&hl=en-US&gl=US&mapclient=embed&cid=3975772482927079619" target="_blank" className="text-gray-300">21 Fawakeh,Ad Doqi,Giza</a>
                     </div>
                   </Tilt>
                 </motion.div>
