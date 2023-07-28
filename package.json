@@ -22,6 +22,7 @@
     "react-accessible-accordion": "^5.0.0",
     "react-countup": "^6.4.2",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.45.2",
     "react-parallax-tilt": "^1.7.154",
     "react-player": "^2.12.0",
     "react-toastify": "^9.1.3",

@@ -13,13 +13,13 @@ const SocialIcons = () => {
   }
   return (
     <motion.div
-      initial={{ x: "-4rem", opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
+      initial={{ y: "-4rem", opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", duration: 1 }}
       viewport={{ once: true }}
-      className="social-icons fixed left-4 md:left-6 bottom-0"
+      className="social-icons left-4 md:left-6 mt-4"
     >
-      <ul className="flex flex-col gap-6 after:content-[''] after:block after:w-[2px] after:h-20 after:mx-auto after:dark:bg-slate-50 after:bg-indigo-400 after:mb-2">
+      <ul className="flex items-center gap-6">
         {socialIcons.map(({ name, icon, url }) => (
           <li key={name} title={name} className="flexCenter">
             <Link
@@ -36,10 +36,10 @@ const SocialIcons = () => {
               className="dark:text-slate-50 focus:-translate-y-1 hover:-translate-y-1 text-indigo-600 p-3 focus:outline-dashed outline-2 outline-theme-color transition-all ease-in rounded-full bg-slate-200 dark:bg-indigo-600 shadow-xl"
               onClick={openWhatsapp}
             >
-             <div className="w-8 dark:fill-slate-50 fill-indigo-600">
-             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 width="800px" height="800px" viewBox="0 0 30.667 30.667"
-	 xml:space="preserve">
+             <div className="w-[1.7rem] dark:fill-slate-50 fill-indigo-600">
+              <svg  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
+	  viewBox="0 0 30.667 30.667"
+	 xmlSpace="preserve">
 <g>
 	<path d="M30.667,14.939c0,8.25-6.74,14.938-15.056,14.938c-2.639,0-5.118-0.675-7.276-1.857L0,30.667l2.717-8.017
 		c-1.37-2.25-2.159-4.892-2.159-7.712C0.559,6.688,7.297,0,15.613,0C23.928,0.002,30.667,6.689,30.667,14.939z M15.61,2.382

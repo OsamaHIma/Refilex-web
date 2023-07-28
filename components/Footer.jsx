@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SocialIcons from "@/components/SocialIcons";
 
 const Footer = () => {
   return (
@@ -9,20 +10,15 @@ const Footer = () => {
             <Image src="/logo.png" alt="logo" width={133} height={133} />
           </div>
           <h3 className="secondaryText">
-            Start With a selection of the best experts,
-            <br />
-            Empower your business with our services.
+          We are always available around the clock to answer your inquiries.
+          <br/>
+          So, please feel free to contact us
           </h3>
         </div>
         <div className="flexColStart f-right !items-center text-center">
           <span className="primaryText dark:text-indigo-500">Information</span>
           <span className="secondaryText">21 Fawakeh Dokki, Cairo, Egypt</span>
-          <div className="flexCenter f-menu mt-6 gap-6 font-medium">
-            <span>Property</span>
-            <span>Services</span>
-            <span>Product</span>
-            <span>About Us</span>
-          </div>
+         <SocialIcons/>
         </div>
       </div>
     </section>

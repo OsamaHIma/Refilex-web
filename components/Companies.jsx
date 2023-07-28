@@ -1,8 +1,9 @@
 "use client";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
-import Image from "next/image";
 import { companiesSliderSittings } from "@/constants";
+import Image from "next/image";
+import "swiper/swiper.css";
 
 const Companies = () => {
   const images = [
@@ -20,12 +21,13 @@ const Companies = () => {
   SwiperCore.use([Autoplay]);
 
   return (
-    <section>
-      <h1 className="dark:text-white text-slate-500 font-black md:text-[50px] sm:text-[40px] xs:text-[30px] text-[20px] mt-8 text-center">OUR HAPPY CLIENTS</h1>
+    <section className="py-16">
+      <h1 className="dark:text-white text-slate-500 font-black md:text-[50px] sm:text-[40px] xs:text-[30px] text-[20px] my-8 text-center">OUR HAPPY CLIENTS</h1>
       <div className="relative">
         <Swiper
           className="pt-8"
           {...companiesSliderSittings}
+          // slidesPerView={4}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
         >
           {images.map((image, index) => (

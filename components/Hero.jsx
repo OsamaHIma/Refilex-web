@@ -36,7 +36,7 @@ const Hero = () => {
 
             {scrollPosition > 100 && (
               <motion.div
-                className="fixed bottom-14 right-4"
+                className="fixed bottom-[9rem] right-4"
                 initial={{ x: "3rem", opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, type: "tween" }}

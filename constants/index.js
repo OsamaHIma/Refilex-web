@@ -20,21 +20,17 @@ import {
 
 export const navLinks = [
   {
-    id: "services",
-    name: "Services",
+    id: "about-us",
+    name: "About Us",
   },
-  // {
-  //   id: "our-value",
-  //   name: "Our Value",
-  // },
+  {
+    id: "services",
+    name: "Our Services",
+  },
   {
     id: "contact-us",
     name: "Contact Us",
-  },
-  // {
-  //   id: "get-started",
-  //   name: "Get started",
-  // },
+  }
 ];
 
 export const companiesSliderSittings = {
@@ -92,7 +88,7 @@ export const services = [
       "Our highly skilled and creative team helps you make your ideas come true into a vivid and attractive image in the form of a seamless app compatible with all devices as Android and the iPhone.",
     image: "/image.png",
     icon: (
-      <Smartphone className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />
+      <Smartphone className="inline h-8 w-8 text-indigo-500" />
     ),
   },
   {
@@ -100,7 +96,7 @@ export const services = [
     description:
       "We help you to create an integrated, attractive, easy-to-browse website that is so appropriate to the nature of your business that it reflects your activity in a distinctive and targeted way, and makes you achieve your goals by helping you to appear in the first results of search engines.",
     image: "/image.png",
-    icon: <Globe className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />,
+    icon: <Globe className="inline h-8 w-8 text-indigo-500" />,
   },
   {
     title: "E-Commerce Development",
@@ -108,7 +104,7 @@ export const services = [
       "Refilex helps you create e-stores with the latest technologies and global e-commerce platforms, by empowering you with many features such as e-commerce platforms and linking them to various payment methods in addition to helping you study and analyze the market to reach your target customers and achieve the desired outcomes.",
     image: "/image.png",
     icon: (
-      <ShoppingBag className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />
+      <ShoppingBag className="inline h-8 w-8 text-indigo-500" />
     ),
   },
   {
@@ -116,13 +112,13 @@ export const services = [
     description:
       "Refilex helps you create e-stores with the latest technologies and global e-commerce platforms, by empowering you with many features such as e-commerce platforms and linking them to various payment methods in addition to helping you study and analyze the market to reach your target customers and achieve the desired outcomes.",
     image: "/image.png",
-    icon: <Server className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />,
+    icon: <Server className="inline h-8 w-8 text-indigo-500" />,
   },
   {
     title: "Server Security",
     description:
       "We are a unique entity that has a group of network and server security experts, who work around the clock to manage, secure, and protect your servers in accordance with the specifications of each server and the requirements of the hosted websites, in addition to following up on daily updates of exploits and solving it on an ongoing basis, as well as implementing the proper maintenance procedures for databases.",
     image: "/image.png",
-    icon: <Shield className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />,
+    icon: <Shield className="inline h-8 w-8 text-indigo-500" />,
   },
 ];

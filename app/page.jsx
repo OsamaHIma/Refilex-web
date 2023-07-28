@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
 import VideoPlayer from "@/components/VideoCanvas";
-import SocialIcons from "@/components/SocialIcons";
 import TawkTo from "@/components/Tawk";
 
 const Home = () => {
@@ -19,20 +18,20 @@ const Home = () => {
         <Hero />
         <Companies />
         <VideoPlayer />
-        <div className="relative">
+     
           <div className="gradient absolute -top-24 right-[100px] h-80 w-80 bg-indigo-600/30 blur-[100px]" />
           <OurServices />
-          <SocialIcons />
+          {/* <SocialIcons /> */}
           {/* <ContactUs /> */}
         
         <GetStarted />
-        <div className="gradient absolute top-[33rem] -z-1 left-[40%] h-80 w-80 bg-orange-400/50 blur-[100px]" />
-        <div className="gradient absolute bottom-0 -z-1 left-[30%] h-80 w-80 bg-indigo-400/50 blur-[100px]" />
+        <div className="gradient absolute top-[50%] -z-1 left-[40%] h-80 w-80 bg-orange-400/30 blur-[100px]" />
+        <div className="gradient absolute bottom-0 -z-1 left-0 h-80 w-80 bg-indigo-500/30 blur-[100px]" />
 
         <footer>
           <Footer />
         </footer>
-        </div>
+     
       </section>
     </main>
   );

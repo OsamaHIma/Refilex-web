@@ -30,13 +30,14 @@ const ServiceCard = ({ index, title, icon, image, description }) => {
       </Tilt>
       <div className="bg-indigo-200 dark:bg-indigo-800 my-auto flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-3 py-5 md:w-1/2 md:px-8 md:py-2">
         <motion.h3
-          className=" mb-2 text-[20px] font-bold md:text-left"
+          className="text-[20px] font-bold md:text-left"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: "spring" }}
           
         >
           {title}
+          {"   "}
           {icon}
         </motion.h3>
 
@@ -58,7 +59,7 @@ const ServiceCard = ({ index, title, icon, image, description }) => {
 };
 const OurServices = () => {
   return (
-    <div className="paddings innerWidth z-1">
+    <section className="paddings innerWidth" id="services">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -92,7 +93,7 @@ const OurServices = () => {
           ))}
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

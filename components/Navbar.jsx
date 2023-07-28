@@ -1,9 +1,10 @@
 "use client";
 import { navLinks } from "@/constants";
-import Link from "next/link";
+import { motion } from "framer-motion";
 import { Moon, Sun, Laptop, MenuIcon, Mail, Phone } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 // h- stands for header-
 const Navbar = () => {
   const { setTheme } = useTheme();
@@ -55,7 +56,13 @@ const Navbar = () => {
         scrolled && " bg-gray-400/50 backdrop-blur-md"
       } h-wrapper fixed top-0 z-20 w-full text-slate-100 transition-all ease-in`}
     >
-      <div className="h-container flexCenter paddings innerWidth relative !justify-between border-b-[3px] border-slate-300 !py-2 dark:border-slate-700">
+      <motion.div
+        initial={{ y: "-2rem", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ type: "spring", duration: 1 }}
+        viewport={{ once: true }}
+        className="h-container flexCenter paddings innerWidth relative !justify-between border-b-[3px] border-slate-300 !py-2 dark:border-slate-700"
+      > 
         <div className="flex items-center gap-3">
           <Link href="/">
             <img src="/logo.png" alt="logo" />
@@ -121,7 +128,7 @@ const Navbar = () => {
                 type="button"
                 className="btn translation-all bg-indigo-600 ease-in-out hover:bg-indigo-700"
               >
-                <Link href="#contact">Request a meeting</Link>
+                <Link href="/contact">Request a meeting</Link>
               </button>
             </ul>
           </div>
@@ -143,11 +150,11 @@ const Navbar = () => {
               type="button"
               className="btn translation-all bg-indigo-600 ease-in-out hover:bg-indigo-700"
             >
-              <Link href="#contact">Request a meeting</Link>
+              <Link href="/contact">Request a meeting</Link>
             </button>
           </ul>
         </section>
-      </div>
+      </motion.div>
     </nav>
   );
 };

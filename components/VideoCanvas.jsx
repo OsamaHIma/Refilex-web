@@ -13,7 +13,9 @@ const VideoPlayer = () => {
   };
 
   return (
-  <section className='my-5'>
+  <section className='py-20' id="about-us">
+      <h1 className="dark:text-white text-slate-500 font-black md:text-[50px] sm:text-[40px] xs:text-[30px] text-[20px] my-8 text-center ">About Us</h1>
+
     <div
       className="relative h-0 w-[80%] mx-auto overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600
         to-orange-600 pb-[43%] shadow-2xl"
