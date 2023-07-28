@@ -78,8 +78,8 @@ const OurServices = () => {
       <motion.p initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.7 }}
-        viewport={{ once: true }}>
-       Refilex offers you a unique and professional package of software services and<br/> solutions designed specifically to meet your activity and business needs.
+        viewport={{ once: true }}className="text-center">  
+       Refilex offers you a unique and professional package of software services,<br/> and solutions designed specifically to meet your activity and business needs.
       </motion.p>
         <div className="grid grid-cols-1">
           {services.map((service, index) => (
