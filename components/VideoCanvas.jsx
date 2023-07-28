@@ -13,9 +13,10 @@ const VideoPlayer = () => {
   };
 
   return (
+  <section className='my-5'>
     <div
       className="relative h-0 w-[80%] mx-auto overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600
-        to-orange-600 pb-[56.25%] shadow-2xl"
+        to-orange-600 pb-[43%] shadow-2xl"
     >
       <div className="absolute left-0 top-0 z-[1] h-full w-full">
         <ReactPlayer
@@ -46,6 +47,7 @@ const VideoPlayer = () => {
         </>
       )}
     </div>
+    </section>
   );
 };
 

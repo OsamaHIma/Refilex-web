@@ -1,4 +1,3 @@
-import { MessagesSquare } from "lucide-react";
 import {
   BarChart2Icon,
   ShieldCheck,
@@ -6,6 +5,17 @@ import {
   MessageSquare,
   PhoneCallIcon,
   VideoIcon,
+  Smartphone,
+  Globe,
+  ShoppingBag,
+  Shield,
+  Server,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  GithubIcon,
+  MessagesSquare,
 } from "lucide-react";
 
 export const navLinks = [
@@ -27,72 +37,9 @@ export const navLinks = [
   // },
 ];
 
-export const sliderData = [
-  {
-    name: "Aliva Priva Jardin",
-    price: "47,043",
-    detail:
-      "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
-    image: "/r1.png",
-  },
-  {
-    name: "Asatti Garden City",
-    price: "66,353",
-    detail:
-      "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
-    image: "/r2.png",
-  },
-  {
-    name: "Citralan Puri Serang",
-    price: "35,853",
-    detail:
-      "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
-    image: "/r3.png",
-  },
-  {
-    name: "Aliva Priva Jardin",
-    price: "47,043",
-    detail:
-      "Jakarta Garden City Street, Cakung. Pulo Gadung, Jakarta Timur, DKI Jakarta",
-    image: "/r1.png",
-  },
-  {
-    name: "Asatti Garden City",
-    price: "66,353",
-    detail:
-      "Pahlawan Street XVII No.215, Cinangka, Sawangan, Depok, Jawa Barat",
-    image: "/r2.png",
-  },
-  {
-    name: "Citralan Puri Serang",
-    price: "35,853",
-    detail:
-      "Ruko Puri Indah Residence Block A7, Lingkar Street, Ciracas, Serang, Banten",
-    image: "/r3.png",
-  },
-];
-
-export const sliderSittings = {
-  slidesPerView: 1,
-  spaceBetween: 50,
-  breakpoints: {
-    480: {
-      slidesPerView: 1,
-    },
-    600: {
-      slidesPerView: 2,
-    },
-    750: {
-      slidesPerView: 3,
-    },
-    1100: {
-      slidesPerView: 4,
-    },
-  },
-};
 export const companiesSliderSittings = {
   slidesPerView: 4,
-  loop:true,
+  loop: true,
   spaceBetween: 20,
   breakpoints: {
     480: {
@@ -110,50 +57,72 @@ export const companiesSliderSittings = {
   },
 };
 
-export const accordionData = [
+export const socialIcons = [
   {
-    icon: <ShieldCheck />,
-    heading: "Best interest rates on the market",
-    detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+    name: "Facebook",
+    icon: <FacebookIcon />,
+    url: "https://www.facebook.com/RefilexOfficial/",
   },
   {
-    icon: <XCircleIcon />,
-    heading: "Prevent unstable prices",
-    detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+    name: "Linkedin",
+    icon: <LinkedinIcon />,
+    url: "https://www.linkedin.com/company/refilex",
   },
   {
-    icon: <BarChart2Icon />,
-    heading: "Best price on the market",
-    detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+    name: "Twitter",
+    icon: <TwitterIcon />,
+    url: "https://www.twitter.com/RefilexOfficial/",
+  },
+  {
+    name: "Linkedin",
+    icon: <InstagramIcon />,
+    url: "https://www.instagram.com/RefilexOfficial/",
+  },
+  {
+    name: "Github",
+    icon: <GithubIcon />,
+    url: "https://github.com/refilex",
   },
 ];
 
-export const contactCards = [
+export const services = [
   {
-    title: "Call",
-    num: "019094388",
-    btnText: "Call Now",
-    icon: <PhoneCallIcon />,
+    title: "Mobile Apps Design and Development",
+    description:
+      "Our highly skilled and creative team helps you make your ideas come true into a vivid and attractive image in the form of a seamless app compatible with all devices as Android and the iPhone.",
+    image: "/image.png",
+    icon: (
+      <Smartphone className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />
+    ),
   },
   {
-    title: "Chat",
-    num: "015094388",
-    btnText: "Chat Now",
-    icon: <MessagesSquare />,
+    title: "Website Development",
+    description:
+      "We help you to create an integrated, attractive, easy-to-browse website that is so appropriate to the nature of your business that it reflects your activity in a distinctive and targeted way, and makes you achieve your goals by helping you to appear in the first results of search engines.",
+    image: "/image.png",
+    icon: <Globe className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />,
   },
   {
-    title: "Video Call",
-    num: "010943885",
-    btnText: "Video Call Now",
-    icon: <VideoIcon />,
+    title: "E-Commerce Development",
+    description:
+      "Refilex helps you create e-stores with the latest technologies and global e-commerce platforms, by empowering you with many features such as e-commerce platforms and linking them to various payment methods in addition to helping you study and analyze the market to reach your target customers and achieve the desired outcomes.",
+    image: "/image.png",
+    icon: (
+      <ShoppingBag className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />
+    ),
   },
   {
-    title: "Message",
-    num: "012094388",
-    btnText: "Message Now",
-    icon: <MessageSquare />,
+    title: "Web Hosting",
+    description:
+      "Refilex helps you create e-stores with the latest technologies and global e-commerce platforms, by empowering you with many features such as e-commerce platforms and linking them to various payment methods in addition to helping you study and analyze the market to reach your target customers and achieve the desired outcomes.",
+    image: "/image.png",
+    icon: <Server className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />,
+  },
+  {
+    title: "Server Security",
+    description:
+      "We are a unique entity that has a group of network and server security experts, who work around the clock to manage, secure, and protect your servers in accordance with the specifications of each server and the requirements of the hosted websites, in addition to following up on daily updates of exploits and solving it on an ongoing basis, as well as implementing the proper maintenance procedures for databases.",
+    image: "/image.png",
+    icon: <Shield className="mx-4 mb-2 inline-block h-8 w-8 text-indigo-500" />,
   },
 ];

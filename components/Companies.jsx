@@ -21,7 +21,7 @@ const Companies = () => {
 
   return (
     <section>
-      <h1 className="mt-8 text-3xl text-gray-400 font-bold text-center">OUR HAPPY CLIENTS</h1>
+      <h1 className="dark:text-white text-slate-500 font-black md:text-[50px] sm:text-[40px] xs:text-[30px] text-[20px] mt-8 text-center">OUR HAPPY CLIENTS</h1>
       <div className="relative">
         <Swiper
           className="pt-8"
@@ -29,7 +29,7 @@ const Companies = () => {
           autoplay={{ delay: 2000, disableOnInteraction: false }}
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="cursor-grab active:cursor-grabbing">
               <Image
                 src={image}
                 alt="company"

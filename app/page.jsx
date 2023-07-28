@@ -1,12 +1,12 @@
 import Companies from "@/components/Companies";
-import ContactUs from "@/components/ContactUs";
+// import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import GetStarted from "@/components/GetStarted";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import OurValue from "@/components/OurValue";
-import Residencies from "@/components/Residencies";
+import OurServices from "@/components/OurServices";
 import VideoPlayer from "@/components/VideoCanvas";
+import SocialIcons from "@/components/SocialIcons";
 import TawkTo from "@/components/Tawk";
 
 const Home = () => {
@@ -15,20 +15,24 @@ const Home = () => {
       <section className="relative bg-slate-200 pb-8 transition-all ease-in dark:bg-primary-black">
         <div className="gradient absolute left-[100px] h-80 w-80 bg-black/20 blur-[100px] dark:bg-white/10" />
         <Navbar />
-        <TawkTo/>
+        {/* <TawkTo/> */}
         <Hero />
         <Companies />
         <VideoPlayer />
-        <Residencies />
         <div className="relative">
           <div className="gradient absolute -top-24 right-[100px] h-80 w-80 bg-indigo-600/30 blur-[100px]" />
-          <OurValue />
-          <ContactUs />
-        </div>
+          <OurServices />
+          <SocialIcons />
+          {/* <ContactUs /> */}
+        
         <GetStarted />
+        <div className="gradient absolute top-[33rem] -z-1 left-[40%] h-80 w-80 bg-orange-400/50 blur-[100px]" />
+        <div className="gradient absolute bottom-0 -z-1 left-[30%] h-80 w-80 bg-indigo-400/50 blur-[100px]" />
+
         <footer>
           <Footer />
         </footer>
+        </div>
       </section>
     </main>
   );

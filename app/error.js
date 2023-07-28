@@ -58,7 +58,7 @@ function Error({ errorMessage }) {
         <div className="relative mt-12 w-full lg:mt-0 lg:w-1/2">
           <img
             className="w-full max-w-lg lg:mx-auto"
-            src="https://merakiui.com/images/components/illustration.svg"
+            src="/serverError.svg"
             alt="505"
           />
         </div>
