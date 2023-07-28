@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <p>Contact US</p>
             <a href="mailto:" className="mr-2">
-              <Mail className="ext-indigo-600 mr-1 inline" />
+              <Mail className="mr-1 inline" />
               info@refilex.com
             </a>
             <a href="tel:+">
@@ -124,6 +124,9 @@ const Navbar = () => {
                   <Link href={`#${link.id}`}>{link.name}</Link>
                 </li>
               ))}
+              <li className="my-3">
+                <Link href='/contact'>Contact Us</Link>
+              </li>
               <button
                 type="button"
                 className="btn translation-all bg-indigo-600 ease-in-out hover:bg-indigo-700"
@@ -146,6 +149,9 @@ const Navbar = () => {
                 <Link href={`#${link.id}`}>{link.name}</Link>
               </li>
             ))}
+            <li className="my-3">
+                <Link href='/contact'>Contact Us</Link>
+              </li>
             <button
               type="button"
               className="btn translation-all bg-indigo-600 ease-in-out hover:bg-indigo-700"
