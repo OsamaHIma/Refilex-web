@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { services } from "@/constants";
+import Link from "next/link";
 
 
 const ServiceCard = ({ index, title, icon, image, description }) => {
@@ -43,16 +44,16 @@ const ServiceCard = ({ index, title, icon, image, description }) => {
 
         <motion.p
           className="mb-4 mt-2 text-center text-[16px] md:text-left"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, type: "spring" }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, type: "spring",delay:0.7 }}
           viewport={{ once: true }}
         >
           {description}
         </motion.p>
-        <button className="rounded-full bg-indigo-500 px-4 py-2 text-white transition-all hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
+        <Link href="/contact" className="rounded-full bg-indigo-500 px-4 py-2 text-white transition-all hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">
           Request Quote
-        </button>
+        </Link>
       </div>
     </motion.div>
   );

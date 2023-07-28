@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import { MessagesSquare, User, MailIcon, Phone, MapPin } from "lucide-react";
+import { MailIcon, Phone, MapPin } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Footer from "@/components/Footer";
@@ -12,6 +12,7 @@ const ContactForm = () => {
   const [Form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -84,7 +85,13 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="container mx-auto my-24 md:px-6">
+      <div className="container relative mx-auto my-24 md:px-6">
+        <motion.div
+          className="absolute left-[50%] top-[40%] h-24 w-24 md:w-32 md:h-32 rounded-full border-8 border-indigo-500/10"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 7, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
+        ></motion.div>
         <section className="mb-32 text-center">
           <div className="py-12 md:px-12">
             <div className="container mx-auto xl:px-32">
@@ -141,6 +148,22 @@ const ContactForm = () => {
                           {/* <MailIcon className="text-theme-color absolute top-4 right-3" /> */}
                         </div>
                       </label>
+                      <label className="flex flex-col">
+                        <div className="mb-4 text-left font-medium text-white">
+                          <span>Phone:</span>
+                        </div>
+                        <div className="relative">
+                          <input
+                            type="tel"
+                            name="phone"
+                            autoComplete="on"
+                            onChange={handelChange}
+                            placeholder="Whats's your phone number?"
+                            className="placeholder:text-secondary w-full rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                          />
+                          {/* <MailIcon className="text-theme-color absolute top-4 right-3" /> */}
+                        </div>
+                      </label>
                       <label className="flex flex-col justify-start">
                         <div className="mb-4 text-left font-medium text-white">
                           <span>Message:</span>{" "}
@@ -187,7 +210,7 @@ const ContactForm = () => {
                   </div>
                 </motion.div>
               </div>
-              <div className="flex w-full items-center gap-5 pt-8">
+              <div className="flex w-full items-center gap-5 pt-8 flex-wrap" >
                 <motion.div
                   initial={{ opacity: 0, y: -50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -201,10 +224,9 @@ const ContactForm = () => {
                     glareBorderRadius="20px"
                     glareColor="#5d56e0"
                   >
-                    <Phone
-                      size={27}
-                      className="rounded-full bg-slate-300 p-4 text-indigo-600"
-                    />
+                    <div className="rounded-full bg-slate-200 p-3 text-indigo-600 shadow-xl outline-indigo-500 transition-all ease-in">
+                      <Phone />
+                    </div>
                     <div>
                       <h3 className="text left">Phone</h3>
                       <a href="tel:+">+201050533006</a>
@@ -224,10 +246,9 @@ const ContactForm = () => {
                     glareBorderRadius="20px"
                     glareColor="#5d56e0"
                   >
-                    <MailIcon
-                      size={27}
-                      className="rounded-full bg-slate-300 p-4 text-indigo-600"
-                    />
+                    <div className="rounded-full bg-slate-200 p-3 text-indigo-600 shadow-xl outline-indigo-500 transition-all ease-in">
+                      <MailIcon />
+                    </div>
                     <div>
                       <h3 className="text left">Mail</h3>
                       <a href="mailto:" className="mr-2">
@@ -249,10 +270,10 @@ const ContactForm = () => {
                     glareBorderRadius="20px"
                     glareColor="#5d56e0"
                   >
-                    <MapPin
-                      size={27}
-                      className="rounded-full bg-slate-300 p-4 text-indigo-600"
-                    />
+                    <div className="rounded-full bg-slate-200 p-3 text-indigo-600 shadow-xl outline-indigo-500 transition-all ease-in">
+                      <MapPin />
+                    </div>
+
                     <div>
                       <h3 className="text left">Address</h3>
                       <p>21 Fawakeh,Ad Doqi,Giza</p>

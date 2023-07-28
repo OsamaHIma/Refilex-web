@@ -12,7 +12,7 @@ const Footer = () => {
           <h3 className="secondaryText">
           We are always available around the clock to answer your inquiries.
           <br/>
-          So, please feel free to contact us
+          So, please feel free to contact us.
           </h3>
         </div>
         <div className="flexColStart f-right !items-center text-center">
