@@ -1,14 +1,15 @@
 import Image from "next/image";
 import SocialIcons from "@/components/SocialIcons";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <section>
       <div className="paddings innerWidth flexCenter  f-container md:!justify-between">
         <div className="flexColStart f-left !items-center gap-4 text-center md:!items-start md:!text-left">
-          <div className="rounded-full bg-indigo-600 px-3 py-2 dark:bg-transparent">
+          <Link href="/" className="rounded-full bg-indigo-600 px-3 py-2 dark:bg-transparent">
             <Image src="/logo.png" alt="logo" width={133} height={133} />
-          </div>
+          </Link>
           <h3 className="secondaryText">
           We are always available around the clock to answer your inquiries.
           <br/>

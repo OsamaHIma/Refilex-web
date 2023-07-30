@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
 import VideoPlayer from "@/components/VideoCanvas";
-import TawkTo from "@/components/Tawk";
+// import TawkTo from "@/components/Tawk";
 
 const Home = () => {
   return (

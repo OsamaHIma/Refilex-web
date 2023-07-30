@@ -62,7 +62,7 @@ const Navbar = () => {
         transition={{ type: "spring", duration: 1 }}
         viewport={{ once: true }}
         className="h-container flexCenter paddings innerWidth relative !justify-between border-b-[3px] border-slate-300 !py-2 dark:border-slate-700"
-      > 
+      >
         <div className="flex items-center gap-3">
           <Link href="/">
             <img src="/logo.png" alt="logo" />
@@ -84,8 +84,8 @@ const Navbar = () => {
         <section className="flexCenter relative">
           {/* Theme menu */}
           <button className="mr-5" onClick={openThemeMenu}>
-            <Moon className="hidden rotate-90 transition-all hover:text-slate-900 dark:block dark:rotate-0 dark:text-slate-100 dark:saturate-100 dark:hover:text-gray-300" />
-            <Sun className="block rotate-0 transition-all hover:text-slate-900 dark:hidden dark:rotate-90 dark:text-slate-100 dark:hover:text-gray-300" />
+            <Moon className="hidden rotate-90 transition-all dark:hover:text-blue-300 dark:block dark:rotate-0 dark:text-slate-100 dark:saturate-100" />
+            <Sun className="block rotate-0 transition-all hover:text-orange-300 dark:hidden dark:rotate-90 dark:text-slate-100" />
             <span className="sr-only">Toggle theme menu</span>
           </button>
 
@@ -121,12 +121,9 @@ const Navbar = () => {
             <ul className="h-menu flexCenter !gap-8">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={`#${link.id}`}>{link.name}</Link>
+                  <Link href={`${link.id}`}>{link.name}</Link>
                 </li>
               ))}
-              <li className="my-3">
-                <Link href='/contact'>Contact Us</Link>
-              </li>
               <button
                 type="button"
                 className="btn translation-all bg-indigo-600 ease-in-out hover:bg-indigo-700"
@@ -142,16 +139,13 @@ const Navbar = () => {
             <span className="sr-only">Toggle menu</span>
           </button>
           <ul
-            className={`menuTransition flex font-medium !text-white lg:hidden ${showMenu} absolute top-[27%] z-10 m-8 w-[15rem] flex-col rounded-lg bg-black/10 px-11 py-8 shadow-lg backdrop-blur-md dark:bg-white/10`}
+            className={`menuTransition flex font-medium lg:hidden ${showMenu} absolute top-[27%] !z-[100] m-8 w-[15rem] flex-col rounded-lg bg-stone-100 dark:bg-stone-900 p-8 shadow-lg`}
           >
             {navLinks.map((link, index) => (
               <li key={index} className="my-3">
-                <Link href={`#${link.id}`}>{link.name}</Link>
+                <Link href={`${link.id}`} className="text-stone-900 dark:text-stone-100">{link.name}</Link>
               </li>
             ))}
-            <li className="my-3">
-                <Link href='/contact'>Contact Us</Link>
-              </li>
             <button
               type="button"
               className="btn translation-all bg-indigo-600 ease-in-out hover:bg-indigo-700"

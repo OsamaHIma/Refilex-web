@@ -20,17 +20,17 @@ import {
 
 export const navLinks = [
   {
-    id: "about-us",
+    id: "#about-us",
     name: "About Us",
   },
   {
-    id: "services",
+    id: "#services",
     name: "Our Services",
   },
-  // {
-  //   id: "contact-us",
-  //   name: "Contact Us",
-  // }
+  {
+    id: "/contact",
+    name: "Contact Us",
+  }
 ];
 
 export const companiesSliderSittings = {

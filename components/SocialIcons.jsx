@@ -19,7 +19,7 @@ const SocialIcons = () => {
       viewport={{ once: true }}
       className="social-icons left-4 md:left-6 mt-4"
     >
-      <ul className="flex items-center gap-6">
+      <ul className="flex items-center flex-wrap gap-6">
         {socialIcons.map(({ name, icon, url }) => (
           <li key={name} title={name} className="flexCenter">
             <Link

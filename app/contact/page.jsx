@@ -85,9 +85,9 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="container relative mx-auto my-24 md:px-6">
+      <div className="container overflow-hidden relative mx-auto my-24 md:px-6">
         <motion.div
-          className="absolute left-[50%] top-[40%] h-24 w-24 md:w-32 md:h-32 rounded-full border-8 border-indigo-500/10"
+          className="absolute left-[50%] top-[40%] h-16 w-16 md:w-32 md:h-32 rounded-full border-8 border-indigo-500/10"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 7, opacity: 1 }}
           transition={{ duration: 1, ease: "easeInOut", delay: 0.9 }}
