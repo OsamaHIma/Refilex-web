@@ -27,12 +27,12 @@ const Hero = () => {
       <div className="static-shape background-shape-main -z-1 absolute" />
 
       <div className="paddings innerWidth grid grid-cols-1 !items-end gap-11 md:grid-cols-4">
-        <div className="hero-left flexColStart gap-12 col-span-3 flex flex-col order-last sm:order-first ">
+        <div className="hero-left flexColStart order-last col-span-3 flex flex-col gap-12 md:order-first ">
           <div className="hero-title relative z-[1]">
-            <div
-              className="circle absolute -top-[6%] left-0 -z-[1] h-[6.3rem] w-[6.3rem] rounded-full border-8 border-dashed border-orange-400 bg-transparent"
+            {/* <div
+              className="circle absolute -top-[6%] left-0 -z-[1] h-[6.3rem] w-[6.3rem] rounded-full border-8 border-dashed border-indigo-400 bg-transparent"
               style={{ animation: "spin 2.7s linear infinite" }}
-            />
+            /> */}
 
             {scrollPosition > 100 && (
               <motion.div
@@ -59,22 +59,25 @@ const Hero = () => {
               color=""
             >
               Your{" "}
-              <TypeAnimation
-                sequence={[
-                  "Software",
-                  3000,
-                  "Startup",
-                  3000,
-                  "Technology",
-                  3000,
-                  "Business",
-                  3000,
-                ]}
-                // style={{ fontSize: "2em" }}
-                className="text-slate-200 dark:text-slate-50"
-                repeat={2}
-              />
-              <br /> Deserves, Perfect
+              <div>
+                <TypeAnimation
+                  sequence={[
+                    "Software",
+                    3000,
+                    "Startup",
+                    3000,
+                    "Technology",
+                    3000,
+                    "Business",
+                    3000,
+                  ]}
+                  className="hidden md:block text-indigo-500 dark:text-orange-400"
+                  repeat={2}
+                />
+                <span class="md:hidden">Business</span>
+              </div>
+              {/* <br /> */}
+              Deserves, Perfect
               <br /> Software Solutions!
             </motion.h1>
           </div>
@@ -99,9 +102,7 @@ const Hero = () => {
                 />
                 <span className="ml-2 text-3xl font-bold text-[orange]">+</span>
               </span>
-              <p className="text-light-gray">
-                Client
-              </p>
+              <p className="text-light-gray">Client</p>
             </div>
 
             <div className="flexColCenter stat !gap-2">
@@ -117,9 +118,7 @@ const Hero = () => {
                   +
                 </span>
               </span>
-              <p className="text-light-gray">
-                Team Members
-              </p>
+              <p className="text-light-gray">Team Members</p>
             </div>
 
             <div className="flexColCenter stat !gap-2">
@@ -138,9 +137,7 @@ const Hero = () => {
                   +
                 </span>
               </span>
-              <p className="text-light-gray">
-                Line Of Code
-              </p>
+              <p className="text-light-gray">Line Of Code</p>
             </div>
 
             <div className="flexColCenter stat !gap-2">
@@ -156,14 +153,12 @@ const Hero = () => {
                   +
                 </span>
               </span>
-              <p className="text-light-gray">
-                Project
-              </p>
+              <p className="text-light-gray">Project</p>
             </div>
           </div>
         </div>
         <motion.div
-          className="hero-right z-[5] mx-auto flex flex-col order-first sm:order-last"
+          className="hero-right z-[5] order-first mx-auto flex flex-col md:order-last"
           initial={{ x: "3rem", opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, type: "tween", delay: 0.5 }}
